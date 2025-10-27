@@ -9,7 +9,7 @@ const projects = [
     progress: 64,
     due: "Dec 12, 2025",
     team: ["RA", "MK", "JS"],
-    accent: "from-indigo-500 to-cyan-400",
+    accent: "from-indigo-500 to-blue-400",
   },
   {
     id: "P-4003",
@@ -56,7 +56,7 @@ export default function Projects() {
     <section className="max-w-7xl mx-auto px-4 sm:px-6 mt-8">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-white text-lg font-medium">Projects</h3>
-        <button className="text-sm px-3 py-1.5 rounded-md bg-white/10 border border-white/10 text-white/90 hover:bg-white/15">
+        <button className="text-sm px-3 py-1.5 rounded-md bg-white/10 border border-white/10 text-white/90 hover:bg-white/15 transition">
           View all
         </button>
       </div>
@@ -65,7 +65,7 @@ export default function Projects() {
         {projects.map((p) => (
           <article
             key={p.id}
-            className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 text-white hover:bg-white/[0.07] transition-group shadow-lg shadow-black/20"
+            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 text-white hover:bg-white/[0.07] transition-all duration-200 will-change-transform hover:scale-[1.01] shadow-lg shadow-black/20"
           >
             <div className={`absolute -right-16 -top-16 h-40 w-40 rounded-full bg-gradient-to-br ${p.accent} opacity-25 blur-2xl`} />
             <div className="flex items-start justify-between gap-4">

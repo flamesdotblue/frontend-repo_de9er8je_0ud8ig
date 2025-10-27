@@ -12,7 +12,7 @@ export default function Stats() {
       title: "Active Projects",
       value: 7,
       icon: PlayCircle,
-      accent: "from-cyan-400 to-indigo-500",
+      accent: "from-blue-400 to-indigo-500",
     },
     {
       title: "Total Tasks",
@@ -34,7 +34,7 @@ export default function Stats() {
         {items.map(({ title, value, icon: Icon, accent }) => (
           <div
             key={title}
-            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 text-white shadow-lg shadow-black/20"
+            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 text-white shadow-lg shadow-black/20 transition-transform duration-200 will-change-transform hover:scale-[1.01]"
           >
             <div className={`absolute -right-12 -top-12 h-32 w-32 rounded-full bg-gradient-to-br ${accent} opacity-30 blur-2xl`} />
             <div className="flex items-center justify-between">
